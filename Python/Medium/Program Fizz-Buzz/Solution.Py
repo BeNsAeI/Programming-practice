@@ -9,17 +9,17 @@ Write the Fizz Buzz Game:
 # Pseudocode:
 # - Count From 1 to size + 1
 # - For each Item in index dictionary
-# - If current number is divisible by 3 add fizz
-# - If current number is divisible by 5 add buzz
+# - If current number is divisible by provided fizz add fizz
+# - If current number is divisible by provided buzz add buzz
 # - Add the new string to the output list
 
-def Fizz_Buzz(size):
+def Fizz_Buzz(size, fizz, buzz):
     out = [];
     for i in range (1, size + 1):
         value = "";
-        if(i % 3 == 0):
+        if(i % fizz == 0):
                 value += "fizz";
-        if(i % 5 == 0):
+        if(i % buzz == 0):
                 value += "buzz";
         if value == "":
             value = str(i);
@@ -30,5 +30,5 @@ def Fizz_Buzz(size):
 # - O(n)
 
 #Test:
-result = Fizz_Buzz(30)
+result = Fizz_Buzz(30,3,5)
 print(",\n".join(result))
